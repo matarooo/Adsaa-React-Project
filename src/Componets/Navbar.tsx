@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
             <button className="p-3 text-neutral-500 hover:text-orange-500 hover:bg-[#161616] rounded-xl transition-all duration-300 border border-transparent hover:border-[#262626]">
             
-            </button><NavLink className="btn-primary text-sm" to="/blog" data-discover="true">ابدأ القراءة</NavLink>
+            </button><NavLink className="btn-primary text-sm" to="blog" data-discover="true">ابدأ القراءة</NavLink>
         </div>
         <button className="md:hidden p-3 text-neutral-400 hover:text-white hover:bg-[#161616] rounded-xl transition-all duration-300 border border-transparent hover:border-[#262626]">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,9 +33,9 @@ export default function Navbar() {
         <div className="bg-[#161616] backdrop-blur-xl rounded-2xl p-4 border border-[#262626]">
             <div className="flex flex-col space-y-1">
             <NavLink className="px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 bg-orange-500/10 text-orange-500 border border-orange-500/30" to="/" data-discover="true" aria-current="page">الرئيسية</NavLink>
-            <NavLink className="px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-neutral-400 hover:bg-[#1a1a1a] hover:text-white" to="/blog" data-discover="true">المدونة</NavLink>
-            <NavLink className="px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-neutral-400 hover:bg-[#1a1a1a] hover:text-white" to="/about" data-discover="true">من نحن</NavLink>
-            <NavLink className="btn-primary text-sm text-center mt-2" to="/blog" data-discover="true">ابدأ القراءة</NavLink>
+            <NavLink className="px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-neutral-400 hover:bg-[#1a1a1a] hover:text-white" to="blog" data-discover="true">المدونة</NavLink>
+            <NavLink className="px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-neutral-400 hover:bg-[#1a1a1a] hover:text-white" to="about" data-discover="true">من نحن</NavLink>
+            <NavLink className="btn-primary text-sm text-center mt-2" to="blog" data-discover="true">ابدأ القراءة</NavLink>
             </div>
         </div>
         </div>
