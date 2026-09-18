@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function Home() {
   return (
     <main className="grow">
@@ -18,9 +20,9 @@ export default function Home() {
           انغمس في أسرار المحترفين ونصائح عملية لتطوير مهاراتك في التصوير.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-          <a className="btn-primary inline-flex items-center justify-center gap-2 group" href="/blog" data-discover="true"><span>استكشف المقالات</span><svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a><a className="btn-secondary inline-flex items-center justify-center gap-2" href="/about" data-discover="true"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span>اعرف المزيد</span></a>
+          <Link className="btn-primary inline-flex items-center justify-center gap-2 group" to="/blog" data-discover="true"><span>استكشف المقالات</span><svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></Link><Link className="btn-secondary inline-flex items-center justify-center gap-2" to="/about" data-discover="true"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span>اعرف المزيد</span></Link>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
           <div className="glass-card p-4 hover:scale-105 transition-transform duration-300" style={{animationDelay: '0ms'}}>
@@ -56,12 +58,12 @@ export default function Home() {
           <h2 className="section-title text-white">مقالات مختارة</h2>
           <p className="section-subtitle max-w-lg">محتوى منتقى لبدء رحلة تعلمك</p>
         </div>
-        <a className="group inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl font-medium transition-all duration-300 hover:-translate-y-0.5" href="blog" data-discover="true">عرض الكل<svg className="w-4 h-4 group-hover:-translate-x-1 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg></a>
+        <Link className="group inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl font-medium transition-all duration-300 hover:-translate-y-0.5" to="/blog" data-discover="true">عرض الكل<svg className="w-4 h-4 group-hover:-translate-x-1 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg></Link>
       </div>
       <div className="space-y-8">
         <article className="group relative bg-[#161616] rounded-3xl overflow-hidden border border-[#262626] hover:border-orange-500/30 transition-all duration-500" style={{animationDelay: '0ms'}}>
-          <a className="block" href="blog/mastering-golden-hour-photography" data-discover="true"><div className="grid md:grid-cols-2 gap-0">
+          <Link className="block" to="/blog/mastering-golden-hour-photography" data-discover="true"><div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-72 md:h-100 overflow-hidden">
                 <img alt="إتقان تصوير الساعة الذهبية: دليل شامل" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?w=800&h=400&fit=crop" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -96,10 +98,10 @@ export default function Home() {
                   <span className="inline-flex items-center gap-2 text-orange-500 font-semibold text-sm group-hover:gap-3 transition-all duration-300">اقرأ المقال<svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></span>
                 </div>
-              </div></div></a>
+              </div></div></Link>
         </article>
         <article className="group relative bg-[#161616] rounded-3xl overflow-hidden border border-[#262626] hover:border-orange-500/30 transition-all duration-500" style={{animationDelay: '150ms'}}>
-          <a className="block" href="blog/portrait-photography-secrets" data-discover="true"><div className="grid md:grid-cols-2 gap-0">
+          <Link className="block" to="/blog/portrait-photography-secrets" data-discover="true"><div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-72 md:h-100 overflow-hidden">
                 <img alt="أسرار تصوير البورتريه: كيف تلتقط روح الشخصية" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -133,10 +135,10 @@ export default function Home() {
                   <span className="inline-flex items-center gap-2 text-orange-500 font-semibold text-sm group-hover:gap-3 transition-all duration-300">اقرأ المقال<svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></span>
                 </div>
-              </div></div></a>
+              </div></div></Link>
         </article>
         <article className="group relative bg-[#161616] rounded-3xl overflow-hidden border border-[#262626] hover:border-orange-500/30 transition-all duration-500" style={{animationDelay: '300ms'}}>
-          <a className="block" href="blog/landscape-photography-guide" data-discover="true"><div className="grid md:grid-cols-2 gap-0">
+          <Link className="block" to="/blog/landscape-photography-guide" data-discover="true"><div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-72 md:h-100 overflow-hidden">
                 <img alt="دليل تصوير المناظر الطبيعية: من المبتدئ إلى المحترف" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -170,7 +172,7 @@ export default function Home() {
                   <span className="inline-flex items-center gap-2 text-orange-500 font-semibold text-sm group-hover:gap-3 transition-all duration-300">اقرأ المقال<svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></span>
                 </div>
-              </div></div></a>
+              </div></div></Link>
         </article>
       </div>
     </div>
@@ -183,7 +185,7 @@ export default function Home() {
       <p className="section-subtitle max-w-lg mx-auto">اعثر على محتوى مصمم حسب اهتماماتك</p>
     </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-        <a className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1" href="blog?category=إضاءة" data-discover="true" style={{animationDelay: '0ms'}}><div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <Link className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1" to="/blog?category=إضاءة" data-discover="true" style={{animationDelay: '0ms'}}><div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           <div className="relative z-10">
             <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors duration-300 border border-orange-500/20 group-hover:border-transparent">
               <i className="fa-solid fa-sun text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
@@ -198,7 +200,7 @@ export default function Home() {
               <svg className="w-4 h-4 text-white rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </div></div></a><a className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1" href="blog?category=بورتريه" data-discover="true" style={{animationDelay: '100ms'}}><div className="absolute inset-0 bg-gradient-to-br from-orange-600 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div></div></Link><Link className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1" to="/blog?category=بورتريه" data-discover="true" style={{animationDelay: '100ms'}}><div className="absolute inset-0 bg-gradient-to-br from-orange-600 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           <div className="relative z-10">
             <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors duration-300 border border-orange-500/20 group-hover:border-transparent">
               <i className="fa-solid fa-user text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
@@ -213,7 +215,7 @@ export default function Home() {
               <svg className="w-4 h-4 text-white rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </div></div></a><a className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1" href="blog?category=مناظر طبيعية" data-discover="true" style={{animationDelay: '200ms'}}><div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div></div></Link><Link className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1" to="/blog?category=مناظر طبيعية" data-discover="true" style={{animationDelay: '200ms'}}><div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           <div className="relative z-10">
             <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors duration-300 border border-orange-500/20 group-hover:border-transparent">
               <i className="fa-solid fa-mountain-sun text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
@@ -228,7 +230,7 @@ export default function Home() {
               <svg className="w-4 h-4 text-white rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </div></div></a><a className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1" href="blog?category=تقنيات" data-discover="true" style={{animationDelay: '300ms'}}><div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div></div></Link><Link className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1" to="/blog?category=تقنيات" data-discover="true" style={{animationDelay: '300ms'}}><div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           <div className="relative z-10">
             <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors duration-300 border border-orange-500/20 group-hover:border-transparent">
               <i className="fa-solid fa-sliders text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
@@ -243,7 +245,7 @@ export default function Home() {
               <svg className="w-4 h-4 text-white rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </div></div></a><a className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1" href="blog?category=معدات" data-discover="true" style={{animationDelay: '400ms'}}><div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div></div></Link><Link className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1" to="/blog?category=معدات" data-discover="true" style={{animationDelay: '400ms'}}><div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           <div className="relative z-10">
             <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors duration-300 border border-orange-500/20 group-hover:border-transparent">
               <i className="fa-solid fa-sun text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
@@ -258,7 +260,7 @@ export default function Home() {
               <svg className="w-4 h-4 text-white rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </div></div></a>
+            </div></div></Link>
       </div>
     </div>
   </section>
@@ -271,12 +273,12 @@ export default function Home() {
           <h2 className="section-title text-white">أحدث المقالات</h2>
           <p className="section-subtitle max-w-lg">محتوى جديد طازج من المطبعة</p>
         </div>
-        <a className="group inline-flex items-center gap-2 text-orange-500 font-semibold hover:text-orange-400 transition-colors" href="blog" data-discover="true">عرض جميع المقالات<svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+        <Link className="group inline-flex items-center gap-2 text-orange-500 font-semibold hover:text-orange-400 transition-colors" to="/blog" data-discover="true">عرض جميع المقالات<svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></Link>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <article className="group card overflow-hidden" style={{animationDelay: '0ms'}}>
-          <a className="block" href="blog/camera-settings-basics" data-discover="true"><div className="relative h-52 overflow-hidden">
+          <Link className="block" to="/blog/camera-settings-basics" data-discover="true"><div className="relative h-52 overflow-hidden">
               <img alt="أساسيات إعدادات الكاميرا: مثلث التعريض الضوئي" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=400&fit=crop" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute top-4 right-4">
@@ -307,10 +309,10 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
-              </div></div></a>
+              </div></div></Link>
         </article>
         <article className="group card overflow-hidden" style={{animationDelay: '100ms'}}>
-          <a className="block" href="blog/photo-composition-rules" data-discover="true"><div className="relative h-52 overflow-hidden">
+          <Link className="block" to="/blog/photo-composition-rules" data-discover="true"><div className="relative h-52 overflow-hidden">
               <img alt="قواعد التكوين الفوتوغرافي: كيف تجعل صورك أكثر جاذبية" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800&h=400&fit=crop" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute top-4 right-4">
@@ -341,10 +343,10 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
-              </div></div></a>
+              </div></div></Link>
         </article>
         <article className="group card overflow-hidden" style={{animationDelay: '200ms'}}>
-          <a className="block" href="blog/mobile-photography-tips" data-discover="true"><div className="relative h-52 overflow-hidden">
+          <Link className="block" to="/blog/mobile-photography-tips" data-discover="true"><div className="relative h-52 overflow-hidden">
               <img alt="تصوير الهاتف المحمول: كيف تلتقط صوراً احترافية بهاتفك" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute top-4 right-4">
@@ -375,7 +377,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
-              </div></div></a>
+              </div></div></Link>
         </article>
       </div>
     </div>
