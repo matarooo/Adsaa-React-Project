@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+:root, :host {
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+      "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --color-orange-400: oklch(75% 0.183 55.934);
+    --color-orange-500: oklch(70.5% 0.213 47.604);
+    --color-orange-600: oklch(64.6% 0.222 41.116);
+    --color-orange-700: oklch(55.3% 0.195 38.402);
+    --color-yellow-500: oklch(79.5% 0.184 86.047);
+    --color-neutral-300: oklch(87% 0 none);
+    --color-neutral-400: oklch(70.8% 0 none);
+    --color-neutral-500: oklch(55.6% 0 none);
+    --color-neutral-600: oklch(43.9% 0 none);
+    --color-black: #000;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-lg: 32rem;
+    --container-xl: 36rem;
+    --container-2xl: 42rem;
+    --container-3xl: 48rem;
+    --container-4xl: 56rem;
+    --container-7xl: 80rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
+    --text-7xl: 4.5rem;
+    --text-7xl--line-height: 1;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --tracking-tight: -0.025em;
+    --tracking-wide: 0.025em;
+    --leading-tight: 1.25;
+    --leading-relaxed: 1.625;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    --blur-sm: 8px;
+    --blur-xl: 24px;
+    --blur-3xl: 64px;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+}
+.gradient-text {
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(135deg,#f97316,#fbbf24);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.glass-card {
+    border-radius: var(--radius-3xl);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    background: #161616cc;
+    border: 1px solid #262626;
+}
+.btn-primary {
+    cursor: pointer;
+    padding-inline: calc(var(--spacing)*8);
+    padding-block: calc(var(--spacing)*4);
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    transition-property: all;
+    transition-timing-function: var(--tw-ease,var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration,var(--default-transition-duration));
+    --tw-duration: .3s;
+    background: linear-gradient(135deg,#f97316,#ea580c);
+    border-radius: 3.40282e38px;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .3s;
+    display: inline-flex;
+
+    &&:hover {
+    transform: translateY(-2px);
+}
+}
+.btn-secondary {
+    cursor: pointer;
+    padding-inline: calc(var(--spacing)*8);
+    padding-block: calc(var(--spacing)*4);
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    transition-property: all;
+    transition-timing-function: var(--tw-ease,var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration,var(--default-transition-duration));
+    --tw-duration: .3s;
+    background-color: #0000;
+    border: 1px solid #333;
+    border-radius: 3.40282e38px;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .3s;
+    display: inline-flex;
+}
+.card {
+    border-radius: var(--radius-3xl);
+    transition-property: all;
+    transition-timing-function: var(--tw-ease,var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration,var(--default-transition-duration));
+    --tw-duration: .5s;
+    background: #161616;
+    border: 1px solid #262626;
+    transition-duration: .5s;
+    overflow: hidden;
+}
+.section-label {
+    margin-bottom: calc(var(--spacing)*6);
+    align-items: center;
+    gap: calc(var(--spacing)*2);
+    padding-inline: calc(var(--spacing)*4);
+    padding-block: calc(var(--spacing)*2);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading,var(--text-sm--line-height));
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+    color: #f97316;
+    background: #f973161a;
+    border: 1px solid #f973164d;
+    border-radius: 3.40282e38px;
+    display: inline-flex;
+}
+.section-title {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading,var(--text-4xl--line-height));
+    --tw-leading: var(--leading-tight);
+    line-height: var(--leading-tight);
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+}
+.section-subtitle {
+    margin-top: calc(var(--spacing)*4);
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading,var(--text-lg--line-height));
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
+    color: var(--color-neutral-400);
+}
